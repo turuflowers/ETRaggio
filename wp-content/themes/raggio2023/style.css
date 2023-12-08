@@ -1,0 +1,656 @@
+/*
+Theme Name: Escuela Técnica Raggio 2023
+Author: Alejandra Mazaira
+Description: Theme para Escuela Técnica Raggio
+Version: 0.1
+*/
+/*****************
+REGLAS GENERALES
+******************/
+* {
+	box-sizing: border-box;
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+	clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+img {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.spacetop {
+	margin-top: 4em;
+}
+
+.data {
+	color: #ADADAD;
+	font-weight: 500;
+	font-size: 0.875em;
+}
+
+.btnSecundarioGosth {
+	color: #fff;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 14px 24px;
+	border-radius: 24px;
+	border: 1.5px solid #fff;
+	display: inline-block;
+}
+
+.btnSecundarioLight {
+	color: #1D1D1B;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 14px 24px;
+	border-radius: 24px;
+	border: 1.5px solid #1D1D1B;
+	display: inline-block;
+}
+
+.btnSecundarioLight:hover {
+	color: #fff;
+	border: 1.5px solid #4A44ED;
+	background-color: #4A44ED;
+}
+
+.btnSecundarioDark {
+	color: #1D1D1B;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 14px 24px;
+	border-radius: 24px;
+	background-color: #FDEB18;
+	border: 1.5px solid #FDEB18;
+	display: inline-block;
+}
+
+.btnSecundarioDark:hover,
+.btnSecundarioGosth:hover {
+	color: #1D1D1B;
+	background-color: #FFF;
+	border: 1.5px solid #FFF;
+	display: inline-block;
+}
+
+
+.btnCajas {
+	padding: 10px 16px;
+	border-radius: 16px 0;
+	background-color: #FDEB18;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #1D1D1B;
+}
+
+.btnCajas:hover {
+	background-color: #4A44ED;
+	color: #fff;
+}
+
+.tituloSeccion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tituloSeccion h2{
+	margin-top:0;
+	margin-bottom:1.5%;
+}
+
+.decotitulo {
+	width: 170px;
+	height: 4px;
+	background-color: #1D1D1B;
+	margin-bottom: 4%;
+}
+
+.separador {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1px;
+	background-color: #565656;
+}
+
+.linea {
+	border-bottom: solid 1px #565656;
+}
+
+.space-bottom {
+	margin-bottom: 10%;
+}
+
+/*****************
+TOP
+******************/
+
+#top {
+	background-color: #FBE91E;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0 5%;
+}
+
+#top button {
+	color: #000;
+	border: none;
+	background-color: transparent;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 0.875em;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	padding: 0 20px 0 48px;
+	background-position-y: center;
+	background-position-x: 14px;
+	background-repeat: no-repeat;
+}
+
+button.estudiante {
+	background-image: url(images/icons/estudiantes.svg);
+}
+
+button.campus {
+	background-image: url(images/icons/campus.svg);
+}
+
+#top button:hover {
+	background-color: #4A44ED;
+	color: #fff;
+}
+
+#top button:active {
+	background-color: #430DDE;
+	color: #fff;
+}
+
+#top button:hover.estudiante {
+	background-image: url(images/icons/estudiantes-blanco.svg);
+}
+
+#top button:hover.campus {
+	background-image: url(images/icons/campus-blanco.svg);
+}
+
+#top button img {
+	margin-right: 4px;
+}
+
+.hamburger {
+	width: 48px;
+	height: 48px;
+	background-image: url("/wordpress/wp-content/themes/raggio2023/images/icons/icon-menu.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+	border-style: solid;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+/*****************
+Header
+******************/
+header {
+	background-color: #1D1D1B;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
+}
+
+nav a {
+	color: #fff;
+	display: inline-block;
+	padding: 8px 16px;
+	font-size: 1em;
+}
+
+.home {
+	display: block;
+	color: #fff;
+	width: 300px;
+}
+
+#navegacion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	padding: 0 5%;
+}
+
+#logo {
+	display: flex;
+	align-items: center;
+}
+
+.escudo {
+	margin-right: 3%;
+}
+
+header h1 {
+	font-size: 1.1875em;
+	font-weight: 500;
+	margin: 0;
+}
+
+header h2 {
+	font-size: 1.1875em;
+	font-weight: 400;
+	font-style: italic;
+	margin: 0;
+}
+
+/*****************
+main
+******************/
+#hero {
+	background-image: url(images/heros/home01.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: auto 100%;
+	min-height: 100vh;
+	padding-top: 140px;
+}
+
+.contenedor {
+	width: 90%;
+	margin-left: auto;
+	margin-right: Auto;
+	display: Flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+
+.cajaNoticias {
+	width: 31%;
+	border-radius: 16px;
+	background: #FFF;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
+	position: relative;
+	overflow: hidden;
+	display:flex;
+	flex-direction: column;
+}
+
+.contenidoNovedad {
+	display: flex;
+	flex-direction: column;
+	padding: 0 32px 48px;
+}
+
+.contenidoNovedad h3 {
+	order: 2;
+	margin-top: 8%;
+	margin-bottom: 2%;
+}
+
+.contenidoNovedad h4 {
+	order: 1;
+	margin-bottom: 0;
+}
+
+.contenidoNovedad p {
+	order: 3;
+}
+
+.contenidoNovedad a {
+	order: 4;
+	position: Absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.destacado {
+	width: 49%;
+	height: 480px;
+	border-radius: 80px 0px;
+	overflow: hidden;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.destacado h2 {
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 600;
+	margin-bottom: 4%;
+}
+
+.destacadoDeco {
+	width: 30%;
+	height: 4px;
+	background-color: #FFF;
+	margin-bottom: 16%;
+}
+
+.Coope {
+	background-image: url("images/template/modelosdescatados.jpg");
+}
+
+.Museo {
+	background-image: url("images/template/modelosdescatados.jpg");
+}
+
+.actividades {
+	background-color: #ECECEC;
+	padding-bottom: 6%;
+}
+
+.cajasActividades {
+	width: 24%;
+}
+
+.cajasActividades a {
+	display: block;
+	color: #000;
+}
+
+.cajasActividades a:hover {
+	color: #4A44ED;
+}
+
+.cajasActividades h3 {
+	margin-top: -20px;
+}
+
+/*****************
+Rotadores
+******************/
+#bannerSuperior {
+	border-radius: 120px 0px;
+	background-image: url("images/rotadores/cicloSuperior/bannerSuperiorTIA.jpeg");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: left center;
+	background-color: #4A44ED;
+	color: #fff;
+	overflow: hidden;
+}
+
+.contenidoBSuperior {
+	background: linear-gradient(270deg, #430DDE 47.92%, rgba(217, 217, 217, 0.00) 82.72%);
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 3%;
+}
+
+.txtBSuperior {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 5%;
+}
+
+
+.txtBSuperior h2 {
+	order: 2;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.txtBSuperior span {
+	order: 2;
+	font-size: 1.875em;
+	text-transform: uppercase;
+	display: block;
+	line-height: 1em;
+}
+
+.txtBSuperior h3 {
+	order: 1;
+	font-size: 1em;
+}
+
+.txtBSuperior .destacadoDeco {
+	order: 3;
+	margin-bottom: 5%;
+}
+
+.txtBSuperior a {
+	order: 4;
+	align-self: flex-end;
+}
+
+
+/*****************
+footer
+******************/
+footer {
+	background-color: #1D1D1B;
+	color: #fff;
+}
+
+footer a {
+	color: #fff;
+}
+
+footer a:hover {
+	color: #FDEB18;
+}
+
+footer h3 {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+footer h5 {
+	padding-bottom: 5%;
+	margin-bottom: 0;
+}
+
+.navegacionFooter {
+	padding: 2% 0;
+}
+
+.identidad {
+	height: 20%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 4% 0;
+}
+
+.derecha {
+	justify-content: flex-end;
+}
+
+.identidad h2,
+.identidad h3 {
+	margin: 0;
+}
+
+.identidad h3 {
+	font-style: italic;
+	font-weight: 400;
+}
+
+.identidadTxt {
+	margin-left: 4%;
+}
+
+.identidad img {
+	width: 10%;
+}
+
+.tituloMarca {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.columnaFooter {
+	width: 17%;
+}
+
+.tituloFooter {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.linksFooter a {
+	font-size: 14px;
+	font-weight: 400;
+	display: block;
+	padding: 7px 14px 7px 0;
+}
+
+.spacer {
+	padding: 0 14px 21px 0;
+	display: block;
+}
+
+.footerIcono {
+	display: inline-block;
+	padding: 12px 24px 12px 0;
+}
+
+
+
+/*****************
+MEDIA QUERIES
+******************/
+
+@media (max-width:1198px) {
+	nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+	}
+}
+
+@media (max-width:992px) {
+	.linksFooter {
+		width: 33%
+	}
+
+	.columnaFooter {
+		width: 33%
+	}
+
+	.navegacionFooter {
+		flex-wrap: wrap;
+	}
+
+	#bannerSuperior{
+		border-radius: 100px 0;
+	}
+	.txtBSuperior span {
+		font-size: 1.6em;
+	}
+
+}
+
+@media (max-width:768px) {
+	h2{
+		font-size:2.5em;
+	}
+	
+	#hero{
+		min-height: 70vh;
+	}
+
+	.cajaNoticias{
+		width:100%;
+		margin-bottom:5%;
+		flex-direction:row;
+	}
+
+	.contenidoNovedad{
+		width:60%;
+	}
+	.contenidoNovedadImg{
+		width:40%;
+		overflow: hidden;
+		display:flex;
+		justify-content: center;
+	}
+
+	.contenidoNovedadImg img{
+		height:100%;
+		width:auto;
+		margin:0 auto;
+		display: block;
+	}
+
+	.no-margin{
+		margin:0;
+	}
+
+	.cajasActividades{
+		width:48%;
+	}
+	
+}
