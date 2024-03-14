@@ -37,6 +37,9 @@ REGLAS GENERALES
 	white-space: normal !important;
 }
 
+.hide{
+  display: none !important;
+}
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -46,6 +49,10 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+button {
+	font-family: inherit;
 }
 
 h2 {
@@ -153,9 +160,9 @@ img {
 	align-items: center;
 }
 
-.tituloSeccion h2{
-	margin-top:0;
-	margin-bottom:1.5%;
+.tituloSeccion h2 {
+	margin-top: 0;
+	margin-bottom: 1.5%;
 }
 
 .decotitulo {
@@ -179,6 +186,75 @@ img {
 
 .space-bottom {
 	margin-bottom: 10%;
+}
+
+/*****************
+MODAL
+******************/
+.container-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	background-blend-mode: multiply;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-modal {
+	width: 40%;
+  min-width: 300px;
+	background-color: #FFF;
+	position: relative;
+	border-radius: 80px 0px;
+	overflow: hidden;
+  height: 80%;
+}
+
+.txt-modal {
+	padding: 5% 10% 10%;
+}
+
+.txt-modal h2 {
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.decoModal {
+	width: 25%;
+	height: 4px;
+	background-color: #000;
+	margin-bottom:8%;
+}
+
+.scroll-content{
+  overflow-y: scroll;
+  height: 45vh;
+  padding-right: .5em;
+}
+
+.close {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	top: 2%;
+	right: 2%;
+	background-image: url(/wp-content/themes/raggio2023/images/icons/close.svg);
+	background-repeat: no-repeat;
+	background-color: transparent;
+  background-size: 100%;
+	border: none;
+	cursor: pointer;
+}
+
+.close img{
+	width:100%;
+	height: 100%;
 }
 
 /*****************
@@ -245,7 +321,7 @@ button.campus {
 .hamburger {
 	width: 48px;
 	height: 48px;
-	background-image: url("/wordpress/wp-content/themes/raggio2023/images/icons/icon-menu.svg");
+	background-image: url("images/icons/icon-menu.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	display: none;
@@ -262,14 +338,22 @@ header {
 	color: #fff;
 	position: fixed;
 	width: 100%;
-	z-index: 99999;
+	z-index: 99998;
 }
 
-nav a {
+nav a,
+nav button {
 	color: #fff;
 	display: inline-block;
-	padding: 8px 16px;
+	padding: .5em 1em;
 	font-size: 1em;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+nav a:hover {
+	color: #FDEB18;
 }
 
 .home {
@@ -284,6 +368,38 @@ nav a {
 	align-items: center;
 	height: 100px;
 	padding: 0 5%;
+}
+
+#navprincipal {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+#navprincipal li {
+	position: relative;
+}
+
+.subnav {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #1D1D1B;
+	flex-direction: column;
+}
+
+#navprincipal li:hover .subnav {
+	display: flex;
+}
+
+.subnav a {
+	display: inline-block;
+
+}
+
+.subnav.active {
+	display: block;
 }
 
 #logo {
@@ -315,7 +431,7 @@ main
 	background-image: url(images/heros/home01.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-size: auto 100%;
+	background-size: 100% auto;
 	min-height: 100vh;
 	padding-top: 140px;
 }
@@ -326,7 +442,7 @@ main
 	margin-right: Auto;
 	display: Flex;
 	justify-content: space-between;
-	flex-wrap:wrap;
+	flex-wrap: wrap;
 }
 
 .cajaNoticias {
@@ -336,7 +452,7 @@ main
 	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
 	position: relative;
 	overflow: hidden;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 }
 
@@ -377,6 +493,13 @@ main
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
+}
+
+.posicion {
+	position: absolute;
+	left: 40px;
+	bottom: 10%;
 }
 
 .destacado h2 {
@@ -393,17 +516,22 @@ main
 	margin-bottom: 16%;
 }
 
-.Coope {
+.coope {
 	background-image: url("images/template/modelosdescatados.jpg");
+	background-repeat: no-repeat;
+	background-size: 120% auto;
+	/*background: linear-gradient(0deg, #000 -50%, rgba(0, 0, 0, 0.50) 70%), url("images/template/modelosdescatados.jpg") no-repeat;*/
 }
 
-.Museo {
+.museo {
 	background-image: url("images/template/modelosdescatados.jpg");
+	background-repeat: no-repeat;
+	background-size: 120% auto;
 }
 
 .actividades {
 	background-color: #ECECEC;
-	padding-bottom: 6%;
+	padding: 10% 0;
 }
 
 .cajasActividades {
@@ -426,15 +554,78 @@ main
 /*****************
 Rotadores
 ******************/
-#bannerSuperior {
+.slide {
 	border-radius: 120px 0px;
-	background-image: url("images/rotadores/cicloSuperior/bannerSuperiorTIA.jpeg");
-	background-repeat: no-repeat;
-	background-size: auto 100%;
-	background-position: left center;
-	background-color: #4A44ED;
 	color: #fff;
 	overflow: hidden;
+  background-color: #4A44ED;
+}
+
+#bannerSuperior_tia{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorTIA.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_mmo{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorMmo.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Electricidad{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorElectricidad.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Electro{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorElectro.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Ebanisteria{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorEbanisteria.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Grafica{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorGrafica.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Joyeria{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorJoyeria.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Mecanica{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorMecanica.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Publicidad{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorPublicidad.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Automotores{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorAutomotores.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
+}
+#bannerSuperior_Indumentaria{
+  background-image: url("images/rotadores/cicloSuperior/bannerSuperiorIndumentaria.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left center;
 }
 
 .contenidoBSuperior {
@@ -456,7 +647,7 @@ Rotadores
 
 .txtBSuperior h2 {
 	order: 2;
-	font-size: 2em;
+	font-size: 1.2em;
 	font-weight: 300;
 }
 
@@ -483,6 +674,26 @@ Rotadores
 	align-self: flex-end;
 }
 
+.slick-next {
+    right: 20px;
+    z-index: 99;
+}
+.slick-prev {
+    left: 20px;
+    z-index: 99;
+}
+
+.slick-dots li.slick-active button:focus .slick-dot-icon {
+    color: #430DDE;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button .slick-dot-icon{
+  color: #430DDE;
+}
+.slick-dots li button:focus .slick-dot-icon:before{
+  color: #430DDE;
+}
 
 /*****************
 footer
@@ -584,73 +795,326 @@ MEDIA QUERIES
 @media (max-width:1198px) {
 	nav {
 		display: none;
+		position: absolute;
+		left: 0;
+		top: 140px;
+		width: 100%;
+		height: calc(100vh - 140px);
+		background: #1D1D1B;
+		overflow-y: scroll;
+	}
+
+	#navprincipal {
+		flex-direction: column;
+	}
+
+	nav a,
+	nav button {
+		display: block;
+		text-align: left;
+		width: 100%;
+	}
+
+	.subnav {
+		position: relative;
+		top: 0;
+		padding-left: 1em;
+	}
+
+	nav.active {
+		display: block;
 	}
 
 	.hamburger {
 		display: block;
 	}
+
+	.coope,
+	.museo {
+		background-size: auto 120%;
+	}
 }
 
 @media (max-width:992px) {
+	.close {
+		width: 60px;
+		height: 60px;
+	}
+	.content-modal {
+		border-radius: 60px 0px;
+	}
+	#hero {
+		background-size: auto 100%;
+	}
+
 	.linksFooter {
 		width: 33%
 	}
 
 	.columnaFooter {
-		width: 33%
+		width: 33%;
 	}
 
 	.navegacionFooter {
 		flex-wrap: wrap;
 	}
 
-	#bannerSuperior{
+	.slide {
 		border-radius: 100px 0;
+		background-position: center top !important;
+		background-size: 100% auto !important;
 	}
+
+	.contenidoBSuperior {
+		background: linear-gradient(0deg, #430DDE 47.92%, rgba(217, 217, 217, 0.00) 82.72%);
+		padding: 30% 3% 3% 3%;
+	}
+
 	.txtBSuperior span {
 		font-size: 1.6em;
+	}
+
+	.txtBSuperior {
+		width: 100%;
+	}
+
+	.txtBSuperior h3 {
+		margin-bottom: -2%;
+	}
+
+	.destacado h2 {
+		font-size: 2em;
 	}
 
 }
 
 @media (max-width:768px) {
-	h2{
-		font-size:2.5em;
+
+	.content-modal {
+		width: 60%;
 	}
 	
-	#hero{
+	h2 {
+		font-size: 2.5em;
+	}
+
+	#hero {
 		min-height: 70vh;
+		background-size: auto 100%;
 	}
 
-	.cajaNoticias{
-		width:100%;
-		margin-bottom:5%;
-		flex-direction:row;
+	.cajaNoticias {
+		width: 100%;
+		margin-bottom: 5%;
+		flex-direction: row;
 	}
 
-	.contenidoNovedad{
-		width:60%;
+	.contenidoNovedad {
+		width: 60%;
 	}
-	.contenidoNovedadImg{
-		width:40%;
+
+	.contenidoNovedadImg {
+		width: 40%;
 		overflow: hidden;
-		display:flex;
+		display: flex;
 		justify-content: center;
 	}
 
-	.contenidoNovedadImg img{
-		height:100%;
-		width:auto;
-		margin:0 auto;
+	.contenidoNovedadImg img {
+		height: 100%;
+		width: auto;
+		margin: 0 auto;
 		display: block;
 	}
 
-	.no-margin{
-		margin:0;
+	.no-margin {
+		margin: 0;
 	}
 
-	.cajasActividades{
-		width:48%;
+	.slide {
+		border-radius: 70px 0;
+	}
+
+	.cajasActividades {
+		width: 48%;
+	}
+
+	.destacados {
+		width: 70%;
+	}
+
+	.destacado {
+		width: 100%;
+		height: 320px;
+		margin-bottom: 4%;
+	}
+
+	.museo,
+	.coope {
+		background-size: 120% auto;
+	}
+
+}
+
+@media (max-width:576px) {
+	.cajaNoticias {
+		flex-direction: column;
+	}
+
+	.contenidoNovedadImg {
+		width: 100%;
+	}
+
+	.contenidoNovedadImg img {
+		height: auto;
+		width: 120%;
+	}
+
+	.contenidoNovedad {
+		width: 100%;
+	}
+
+	.destacados {
+		width: 80%;
+	}
+
+	.space-top {
+		margin-top: 9%;
+	}
+
+	.identidad {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.derecha {
+		justify-content: center;
+	}
+
+	.linksFooter {
+		width: 100%;
+		text-align: center;
+	}
+
+	.linksFooter h3 {
+		border-bottom: solid 1px #565656;
+		padding-bottom: 4%;
+	}
+
+	.columnaFooter {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width:502px) {
+	.content-modal {
+		width: 70%;
+	}
+	.scroll-content{
+		height: 50vh;
 	}
 	
+	.txtBSuperior span {
+		font-size: 1.3em;
+	}
+
+	.txtBSuperior h2 {
+		font-size: 1.6em;
+	}
+
+
+}
+
+
+@media (max-width:440px) {
+	#top {
+		justify-content: space-between;
+	}
+
+	#top button {
+		padding: 0 10px 0 48px;
+	}
+
+	.escudo {
+		margin-right: -3%;
+	}
+
+	.escudo img {
+		width: 74%;
+	}
+
+	header h1 {
+		font-size: 1em;
+	}
+
+	header h2 {
+		font-size: 1em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	.decotitulo {
+		margin-bottom: 8%;
+	}
+
+	.slide {
+		border-radius: 40px 0;
+	}
+
+	.txtBSuperior h3 {
+		font-size: 0.9em;
+		width: 60%;
+		line-height: 1.2em;
+	}
+
+	.slide .btnSecundarioGosth {
+		margin-bottom: 4%;
+	}
+
+	.contenidoBSuperior {
+		background: linear-gradient(0deg, #430DDE 26%, rgba(217, 217, 217, 0.00) 66.72%);
+		padding: 50% 3% 3% 3%;
+	}
+
+	.txtBSuperior .destacadoDeco {
+		margin-bottom: 10%;
+	}
+
+	.cajasActividades h3 {
+		font-size: 1em;
+	}
+
+	.cajasActividades {
+		width: 48%;
+	}
+
+	.destacado h2 {
+		font-size: 1.6em;
+	}
+
+	.destacado {
+		border-radius: 40px 0px;
+		height: 340px;
+	}
+
+	.coope {
+		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/modelosdescatados.jpg) no-repeat;
+		;
+		background-size: 100% auto;
+		margin-bottom: 10%;
+	}
+
+	.museo {
+		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/modelosdescatados.jpg) no-repeat;
+		background-size: 100% auto;
+	}
+
+
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
 	<meta charset="utf-8">
@@ -8,6 +8,13 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
 		rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css"
+		href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+
+	<link rel="stylesheet" type="text/css"
+		href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+
 	<link href="/wp-content/themes/raggio2023/style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -26,23 +33,83 @@
 					</div>
 					<div>
 						<h1>Escuela Técnica Raggio</h1>
-						<h2>"Rumbo al Centenario"</h2>
+						<h2>"Año del centenario"</h2>
 					</div>
 				</div>
 			</a>
 			<nav>
-				<a href="#">Ciclo Básico</a>
-				<a href="#">Ciclo Superior</a>
-				<a href="#">Institucional</a>
-				<a href="#">Novedades</a>
-				<a href="#">Actividades</a>
-				<a href="#">Contacto</a>
+				<ul id="navprincipal">
+					<li><a href="#">Ciclo Básico</a></li>
+					<li>
+						<button data-subnav="subnav1">Ciclo Superior</button>
+						<div id="subnav1" class="subnav">
+							<a href="#">Alimentos</a>
+							<a href="#">Construcciones</a>
+							<a href="#">Automotores</a>
+							<a href="#">Muebles</a>
+							<a href="#">Gráficas</a>
+							<a href="#">Electricidad</a>
+							<a href="#">Electrónica</a>
+							<a href="#">Indumentaria</a>
+							<a href="#">Mecánica</a>
+							<a href="#">Orfebrería</a>
+							<a href="#">Publicidad</a>
+						</div>
+					</li>
+					<li>
+						<button data-subnav="subnav2">Institucional</button>
+						<div id="subnav2" class="subnav">
+							<a href="#">Proyecto</a>
+							<a href="#">Programa de estudios</a>
+							<a href="#">Autoridades</a>
+							<a href="#">Tutorías</a>
+							<a href="#">DOE</a>
+							<a href="#">Agenda Educativa</a>
+							<a href="#">Comunicaciones internas</a>
+							<a href="#">Noticias</a>
+						</div>
+
+					</li>
+					<li>
+						<button data-subnav="subnav3">Novedades</button>
+						<div id="subnav3" class="subnav">
+							<a href="#">Noticias</a>
+							<a href="#">Becas Ciudad</a>
+							<a href="#">Inscripción</a>
+							<a href="#">Agradecimientos</a>
+							<a href="#">Conectar Igualdad</a>
+						</div>
+
+					</li>
+					<li>
+						<button data-subnav="subnav4">Actividades</button>
+						<div id="subnav4" class="subnav">
+							<a href="#">Remo Raggio</a>
+							<a href="#">Campamento</a>
+							<a href="#">Torneos Atletismo</a>
+							<a href="#">Olimpíadas</a>
+						</div>
+
+					</li>
+					<li>
+						<button data-subnav="subnav5">Contacto</button>
+						<div id="subnav5" class="subnav">
+							<a href="#">Medios de comunicación</a>
+							<a href="#">Cómo llegar</a>
+							<a href="#">Redes Sociales</a>
+							<a href="#">Empresas</a>
+						</div>
+
+					</li>
+				</ul>
+
+
 			</nav>
 			<button class="hamburger">
 				<span class="sr-only">Menu</span>
 			</button>
 		</div>
-		
+
 	</header>
 	<main>
 		<section id="hero" class="space-bottom">
@@ -95,28 +162,141 @@
 				<a href="#" class="btnSecundarioLight">VER MÁS NOTICIAS</a>
 			</div>
 		</section>
-		<section id="bannerSuperior" class="space-bottom">
+		<section id="rotador" class="slides space-bottom">
 			<!-- rotador -->
-			<div class="contenidoBSuperior">
-				<div class="txtBSuperior">
-					<h2>Técnico en <span>INDUSTRIA DE LOS ALIMENTOS</span></h2>
+			<div id="bannerSuperior_tia" class="slide">
+				<div class="contenidoBSuperior">
+					<div class="txtBSuperior">
+						<h2>Técnico/a en <span>INDUSTRIA DE LOS ALIMENTOS</span></h2>
+						<h3>En el ciclo superior podés titularte como:</h3>
+						<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+						<div class="destacadoDeco"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="bannerSuperior_mmo" class="slide">
+				<div class="contenidoBSuperior">
+					<div class="txtBSuperior">
+						<h2><span>MAESTRO MAYOR DE OBRAS</span></h2>
+						<h3>En el ciclo superior podés titularte como:</h3>
+						<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+						<div class="destacadoDeco"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="bannerSuperior_Automotores" class="slide">
+				<div class="contenidoBSuperior">
+					<div class="txtBSuperior">
+						<h2>Técnico/a en <span>AUTOMOTORES</span></h2>
+						<h3>En el ciclo superior podés titularte como:</h3>
+						<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+						<div class="destacadoDeco"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="bannerSuperior_Ebanisteria" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a en <span>INDUSTRIA DE LA MADERA Y EL MUEBLE</span></h2>
 					<h3>En el ciclo superior podés titularte como:</h3>
 					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
 					<div class="destacadoDeco"></div>
+				  </div>
 				</div>
-			</div>
+			  </div>
+
+			<div id="bannerSuperior_Grafica" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a en <span>DISEÑO Y PRODUCCIÓN GRÁFICA</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="bannerSuperior_Electricidad" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a <span>ELECTRICISTA</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="bannerSuperior_Electro" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a en <span>ELECTRÓNICA</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="bannerSuperior_Indumentaria" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a en <span>INDUSTRIA DE LA INDUMENTARIA</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="bannerSuperior_Mecanica" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a <span>MECÁNICO/A</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="bannerSuperior_Joyeria" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a <span>INDUSTRIA DE LA ORFEBRERÍA</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
+
+			<div id="bannerSuperior_Publicidad" class="slide">
+				<div class="contenidoBSuperior">
+				  <div class="txtBSuperior">
+					<h2>Técnico/a en <span>DISEÑO Y COMUNICACIÓN PUBLICITARIA</span></h2>
+					<h3>En el ciclo superior podés titularte como:</h3>
+					<a href="#" class="btnSecundarioGosth">VER INFORMACIÓN</a>
+					<div class="destacadoDeco"></div>
+				  </div>
+				</div>
+			  </div>
 		</section>
+
 		<section class="space-bottom">
-			<div class="contenedor">
-				<div class="destacado Coope">
+			<div class="contenedor destacados">
+				<div class="destacado coope">
 					<h2>COOPERADORA ESCUELA TÉCNICA RAGGIO</h2>
 					<div class="destacadoDeco"></div>
-					<div><a href="#" class="btnSecundarioDark">VER INFORMACIÓN</a></div>
+					<div class="posicion"><a href="#" class="btnSecundarioDark">VER INFORMACIÓN</a></div>
 				</div>
-				<div class="destacado Museo">
+				<div class="destacado museo">
 					<h2>MUSEO TECNO EDUCATIVO LORENZO RAGGIO</h2>
 					<div class="destacadoDeco"></div>
-					<div><a href="#" class="btnSecundarioDark">VER INFORMACIÓN</a></div>
+					<div class="posicion"><a href="#" class="btnSecundarioDark">VER INFORMACIÓN</a></div>
 				</div>
 			</div>
 		</section>
@@ -128,44 +308,78 @@
 			<div class="contenedor">
 				<div class="cajasActividades text-center">
 					<a href="#">
-						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/Remo.png"
-								alt="Remo Raggio"></div>
+						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/remo.png" alt="Remo Raggio">
+						</div>
 						<h3>Remo Raggio</h3>
 					</a>
 				</div>
 				<div class="cajasActividades text-center">
 					<a href="#">
-						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/Remo.png"
+						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/campamento.png"
 								alt="Campamento Raggio"></div>
 						<h3>Campamento</h3>
 					</a>
 				</div>
 				<div class="cajasActividades text-center">
 					<a href="#">
-						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/Remo.png"
+						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/torneo.png"
 								alt="Torneos y Altetismo"></div>
 						<h3>Torneos & Atletismo</h3>
 					</a>
 				</div>
 				<div class="cajasActividades text-center">
 					<a href="#">
-						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/Remo.png"
-								alt="Olimpíadas"></div>
+						<div><img src="/wp-content/themes/raggio2023/images/logosRaggio/olimpiadas.png"
+								alt="Olimpíadas">
+						</div>
 						<h3>Olimpíadas</h3>
 					</a>
 				</div>
 
 			</div>
 		</section>
+		<div class="container-modal">
+			<div class="content-modal">
+				<div><img src="/wp-content/themes/raggio2023/images/comunicados/img-comunicados.svg"
+						alt="joven con megáfono"></div>
+				<div class="txt-modal">
+					<div class="scroll-content">
+						<h2>Comunicado importante</h2>
+						<div class="decoModal"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed massa imperdiet metus
+							sollicitudin condimentum. Nullam at faucibus libero, quis convallis dui. Donec efficitur
+							faucibus luctus. Donec ex turpis, condimentum id massa lacinia, consectetur dictum orci. Sed
+							id semper massa, vitae accumsan orci. Pellentesque efficitur ligula nec ante ultricies
+							dignissim. Proin ut nibh semper,
+							ullamcorper massa in, pharetra sem. Duis tempus tortor tortor. Vivamus pharetra velit ante,
+							eget
+							sagittis ex venenatis euismod. Proin nec diam ante. Sed laoreet, risus id vehicula
+							tincidunt, est felis bibendum nisi.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat possimus perspiciatis
+							recusandae consequuntur suscipit officia tempora voluptates temporibus ut placeat autem,
+							ratione totam iste! Quibusdam molestias iusto voluptate sapiente quaerat.</p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis at ut cumque minus rerum
+							possimus veritatis eaque nam, deserunt, sint ipsa. Eveniet vero eum itaque, et accusantium
+							iste quos voluptate.</p>
+					</div>
+
+					<div>
+						<button class="close">
+							<span class="sr-only">
+								Cerrar
+							</span>
+						</button>
+					</div>
+				</div>
 	</main>
 	<footer>
 		<div class="contenedor">
-			<div class="identidad">
+			<div class="identidad space-top">
 				<img src="/wp-content/themes/raggio2023/images/logosRaggio/escudoRaggio.svg"
 					alt="Escudo Escuela Técnica Raggio">
 				<div class="identidadTxt">
 					<h2 class="tituloMarca">Escuela Técnica Raggio</h2>
-					<h3>"Rumbo al Centenario"</h3>
+					<h3>"Año del centenario"</h3>
 				</div>
 			</div>
 			<div class="identidad derecha">
@@ -225,19 +439,30 @@
 				<h3 class="linea"><a href=# class="tituloFooter spacer">Museo Raggio</a></h3>
 				<h3 class="linea"><a href=# class="tituloFooter spacer">Contacto</a></h3>
 				<div>
-					<a href="#" target="_blank" class="footerIcono"><img src="/wp-content/themes/raggio2023/images/icons/icon-redes_ig.svg"></a>
-					<a href="mailto:#" target="_blank" class="footerIcono"><img src="/wp-content/themes/raggio2023/images/icons/icon_mail.svg"></a>
+					<a href="#" target="_blank" class="footerIcono"><img
+							src="/wp-content/themes/raggio2023/images/icons/icon-redes_ig.svg"></a>
+					<a href="mailto:#" target="_blank" class="footerIcono"><img
+							src="/wp-content/themes/raggio2023/images/icons/icon_mail.svg"></a>
 				</div>
-				
+
 			</div>
 		</div>
 		<div class="separador"></div>
 		<div class="text-center">
-			<h5>© 2023 - Escuela Técnica Raggio. Gobierno de la Ciudad de Buenos Aires. <br />Todos los derechos
-				reservados.</h5>
+			<h5>© 1924 - 2024 | Escuela Técnica Raggio. Gobierno de la Ciudad de Buenos Aires. <br />Todos los derechos reservados.</h5>
 		</div>
 	</footer>
 
+	<!-- Librerias -->
+	<!-- jQuery -->
+	<script type="text/javascript" src="/wp-content/themes/raggio2023/scripts/librerias/jquery/jquery.js"></script>
+
+	<script type="text/javascript"
+		src="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+	<!-- Nuestro archivo javascript donde configuramos cada uno de los plugins -->
+	<script type="text/javascript" src="/wp-content/themes/raggio2023/scripts/navmenu.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/raggio2023/scripts/rotador.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/raggio2023/scripts/modal.js"></script>
 </body>
 
 </html>
