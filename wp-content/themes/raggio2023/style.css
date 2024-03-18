@@ -271,7 +271,7 @@ TOP
 	padding: 0 5%;
 }
 
-#top button {
+#top a {
 	color: #000;
 	border: none;
 	background-color: transparent;
@@ -282,17 +282,18 @@ TOP
 	cursor: pointer;
 	display: block;
 	height: 100%;
+	line-height: 40px;
 	padding: 0 20px 0 48px;
 	background-position-y: center;
 	background-position-x: 14px;
 	background-repeat: no-repeat;
 }
 
-button.estudiante {
+.estudiante {
 	background-image: url(images/icons/estudiantes.svg);
 }
 
-button.campus {
+.campus {
 	background-image: url(images/icons/campus.svg);
 }
 
@@ -427,14 +428,39 @@ header h2 {
 /*****************
 main
 ******************/
-#hero {
-	background-image: url(images/heros/home01.jpg);
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 100% auto;
-	min-height: 100vh;
-	padding-top: 140px;
+.relativo{
+	position: relative;
 }
+.deco1{
+	width: 100px;
+	position:absolute;
+	z-index:1;
+	top:-125px;
+	right:5%;
+}
+
+.deco2{
+	position:absolute;
+	z-index:1;
+	left:0;
+	bottom: 0;
+}
+.deco3{
+	position:absolute;
+	z-index:1;
+	top:-10%;
+	width:100px;
+	right:0;
+}
+
+.deco4{
+	position:absolute;
+	width:120px;
+	z-index:1;
+	left:0;
+	bottom: -5%;
+}
+
 
 .contenedor {
 	width: 90%;
@@ -494,6 +520,7 @@ main
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	z-index:8000;
 }
 
 .posicion {
@@ -554,11 +581,44 @@ main
 /*****************
 Rotadores
 ******************/
+.item{
+  height: 100vh;
+  max-height: 600px;
+  padding-top: 140px;
+}
+.item .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.item img{
+  width: 60%;
+  max-width: 900px;
+  min-width: 300px;
+}
+.item1{
+	background-image: url(images/heros/home01.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+.item2{
+	background-image: url(images/heros/home02.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% auto;
+}
+
 .slide {
 	border-radius: 120px 0px;
 	color: #fff;
 	overflow: hidden;
   background-color: #4A44ED;
+}
+
+.slick-slider.slick-dotted {
+	margin-bottom: 130px;
 }
 
 #bannerSuperior_tia{
@@ -657,6 +717,7 @@ Rotadores
 	text-transform: uppercase;
 	display: block;
 	line-height: 1em;
+	padding-top: 1%;
 }
 
 .txtBSuperior h3 {
@@ -677,6 +738,7 @@ Rotadores
 .slick-next {
     right: 20px;
     z-index: 99;
+  
 }
 .slick-prev {
     left: 20px;
@@ -695,6 +757,53 @@ Rotadores
   color: #430DDE;
 }
 
+#hero .slick-next, #hero .slick-prev{
+  top: calc(50% + 70px);
+}
+.slick-next .slick-next-icon,
+.slick-prev .slick-prev-icon {
+  opacity: 1;
+}
+.slick-next .slick-next-icon:before{
+  content: url("images/icons/rotador_rightArrow.svg");
+}
+.slick-prev .slick-prev-icon:before{
+  content: url("images/icons/rotador_leftArrow.svg");
+}
+
+/*****************
+UNDER CONSTRUCTION
+******************/
+.hero{
+	display:flex;
+	flex-direction: column;
+	padding-top:150px;
+}
+.animacion{
+	width:55%;
+	height:auto;
+}
+.decoraciones{
+	
+}
+.deco5{
+	position:absolute;
+	width:150px;
+	right:0;
+	top:15%;
+}
+.deco6{
+	position:absolute;
+	width:30px;
+	right:10%;
+	bottom:0;
+}
+.deco7{
+	position:absolute;
+	width:40px;
+	left:0;
+	top:40%;
+}
 /*****************
 footer
 ******************/
@@ -843,7 +952,7 @@ MEDIA QUERIES
 	.content-modal {
 		border-radius: 60px 0px;
 	}
-	#hero {
+	.item1, .item2 {
 		background-size: auto 100%;
 	}
 
@@ -866,9 +975,10 @@ MEDIA QUERIES
 	}
 
 	.contenidoBSuperior {
-		background: linear-gradient(0deg, #430DDE 47.92%, rgba(217, 217, 217, 0.00) 82.72%);
-		padding: 30% 3% 3% 3%;
+		background: linear-gradient(0deg, #430DDE 40%, rgba(217, 217, 217, 0.00) 82.72%);
+		padding: 35% 3% 3% 3%;
 	}
+
 
 	.txtBSuperior span {
 		font-size: 1.6em;
@@ -876,6 +986,7 @@ MEDIA QUERIES
 
 	.txtBSuperior {
 		width: 100%;
+		padding: 0 14%;
 	}
 
 	.txtBSuperior h3 {
@@ -898,10 +1009,13 @@ MEDIA QUERIES
 		font-size: 2.5em;
 	}
 
-	#hero {
+	.item {
 		min-height: 70vh;
-		background-size: auto 100%;
+		
 	}
+  .item1, .item2{
+    background-size: auto 100%;
+  }
 
 	.cajaNoticias {
 		width: 100%;
@@ -957,6 +1071,10 @@ MEDIA QUERIES
 }
 
 @media (max-width:576px) {
+	.deco1{
+			width: 65px;
+			right: 0;
+	}
 	.cajaNoticias {
 		flex-direction: column;
 	}
@@ -1008,6 +1126,10 @@ MEDIA QUERIES
 }
 
 @media (max-width:502px) {
+	.deco2{
+		z-index:1;
+		left:-16%;
+	}
 	.content-modal {
 		width: 70%;
 	}
@@ -1106,7 +1228,6 @@ MEDIA QUERIES
 
 	.coope {
 		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/modelosdescatados.jpg) no-repeat;
-		;
 		background-size: 100% auto;
 		margin-bottom: 10%;
 	}
