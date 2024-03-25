@@ -55,18 +55,23 @@ button {
 	font-family: inherit;
 }
 
-h2 {
+h2, .h2 {
 	font-weight: 700;
 	font-size: 3em;
 }
 
-h3 {
+h3, .h3 {
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 24px;
 }
 
-h5 {
+h4, .h4{
+	font-weight: 600;
+	font-size: 1.125em;
+}
+
+h5, .h5 {
 	font-size: 14px;
 	font-weight: 500;
 }
@@ -78,6 +83,10 @@ img {
 .text-center {
 	text-align: center;
 }
+
+strong {
+	font-weight: 600;
+	}
 
 .text-uppercase {
 	text-transform: uppercase;
@@ -91,6 +100,11 @@ img {
 	color: #ADADAD;
 	font-weight: 500;
 	font-size: 0.875em;
+}
+
+.divisorio{
+	padding-bottom:16px;
+	border-bottom: 1px solid #1D1D1B;
 }
 
 .btnSecundarioGosth {
@@ -158,6 +172,11 @@ img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
 .tituloSeccion h2 {
@@ -170,6 +189,12 @@ img {
 	height: 4px;
 	background-color: #1D1D1B;
 	margin-bottom: 4%;
+}
+.decotituloSub {
+	width: 170px;
+	height: 4px;
+	background-color: #1D1D1B;
+	margin-bottom: 2%;
 }
 
 .separador {
@@ -185,7 +210,7 @@ img {
 }
 
 .space-bottom {
-	margin-bottom: 10%;
+	margin-bottom: 80px;
 }
 
 /*****************
@@ -434,20 +459,20 @@ main
 .deco1{
 	width: 100px;
 	position:absolute;
-	z-index:1;
+	z-index:-1;
 	top:-125px;
 	right:5%;
 }
 
 .deco2{
 	position:absolute;
-	z-index:1;
+	z-index:-1;
 	left:0;
-	bottom: 0;
+	bottom: -40px;
 }
 .deco3{
 	position:absolute;
-	z-index:1;
+	z-index:-1;
 	top:-10%;
 	width:100px;
 	right:0;
@@ -456,13 +481,13 @@ main
 .deco4{
 	position:absolute;
 	width:120px;
-	z-index:1;
+	z-index:-1;
 	left:0;
 	bottom: -5%;
 }
 
 
-.contenedor {
+.contenedor-btw {
 	width: 90%;
 	margin-left: auto;
 	margin-right: Auto;
@@ -471,8 +496,22 @@ main
 	flex-wrap: wrap;
 }
 
+.contenedor-evl {
+	width: 90%;
+	margin-left: auto;
+	margin-right: Auto;
+	display: Flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.columna{
+	flex-direction: column;
+}
+
 .cajaNoticias {
 	width: 31%;
+	margin-bottom: 3%;
 	border-radius: 16px;
 	background: #FFF;
 	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
@@ -520,7 +559,7 @@ main
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	z-index:8000;
+	z-index:80000;
 }
 
 .posicion {
@@ -544,14 +583,14 @@ main
 }
 
 .coope {
-	background-image: url("images/template/modelosdescatados.jpg");
+	background-image: url("images/template/cooperadora.jpg");
 	background-repeat: no-repeat;
 	background-size: 120% auto;
 	/*background: linear-gradient(0deg, #000 -50%, rgba(0, 0, 0, 0.50) 70%), url("images/template/modelosdescatados.jpg") no-repeat;*/
 }
 
 .museo {
-	background-image: url("images/template/modelosdescatados.jpg");
+	background-image: url("images/template/museo.jpg");
 	background-repeat: no-repeat;
 	background-size: 120% auto;
 }
@@ -583,7 +622,7 @@ Rotadores
 ******************/
 .item{
   height: 100vh;
-  max-height: 600px;
+  //max-height: 600px;
   padding-top: 140px;
 }
 .item .content{
@@ -609,6 +648,16 @@ Rotadores
 	background-position: center bottom;
 	background-size: 100% auto;
 }
+.item-horarios{
+	height: 80vh;
+	max-height: 600px;
+	padding-top: 140px;
+	background-image: url(images/heros/heroHorarios.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+
 
 .slide {
 	border-radius: 120px 0px;
@@ -779,31 +828,87 @@ UNDER CONSTRUCTION
 	flex-direction: column;
 	padding-top:150px;
 }
+.full{
+	padding: 3% 20% 2%;
+}
 .animacion{
 	width:55%;
 	height:auto;
 }
-.decoraciones{
-	
-}
+
 .deco5{
 	position:absolute;
 	width:150px;
+	z-index:-1;
 	right:0;
 	top:15%;
 }
 .deco6{
 	position:absolute;
+	z-index:-1;
 	width:30px;
 	right:10%;
 	bottom:0;
 }
 .deco7{
 	position:absolute;
+	z-index:-1;
 	width:40px;
 	left:0;
 	top:40%;
 }
+
+/*****************
+HORARIOS
+******************/
+.grupohorarios{
+	display:Flex;
+	justify-content:flex-start;
+	flex-wrap: wrap;
+	margin-bottom:40px;
+}
+.cardhorario{
+	width:112px;
+	height:144px;
+	border-radius: 16px;
+	background-color: #FFF;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url('images/icons/iconoHorario.svg');
+	background-repeat: no-repeat;
+	background-position: center 16px;
+	margin: 0 8px 16px 8px;
+}
+
+.cardhorario:hover{
+	background-color: #430DDE;
+	background-image: url('images/icons/iconoHorario-hover.svg');
+	background-repeat: no-repeat;
+}
+
+.cardhorario h5{
+	color:#430DDE;
+	font-size:1.125em;
+	font-weight: 600;
+	text-align: center;
+	border-top:1px solid #c6c6c6;
+	width:100%;
+	margin-top: 100px;
+	padding-top: 10px;
+}
+
+.sangria{
+	padding-left:8px;
+}
+
+.cardhorario:hover h5{
+	color:#fff;
+}
+
+
+
 /*****************
 footer
 ******************/
@@ -900,7 +1005,16 @@ footer h5 {
 /*****************
 MEDIA QUERIES
 ******************/
-
+@media (min-width:1000px) and (max-width:1699px) and (min-height:600px) {
+  .item1 {
+    background-size: auto 100%;
+  }
+}
+@media (min-width:1700px){
+  .item1{
+    background-position: center;
+  }
+}
 @media (max-width:1198px) {
 	nav {
 		display: none;
@@ -938,6 +1052,10 @@ MEDIA QUERIES
 		display: block;
 	}
 
+	.item-horarios{
+		background-size: auto 100%;
+	}
+
 	.coope,
 	.museo {
 		background-size: auto 120%;
@@ -954,6 +1072,10 @@ MEDIA QUERIES
 	}
 	.item1, .item2 {
 		background-size: auto 100%;
+	}
+
+	.cajaNoticias {
+		width: 46%;
 	}
 
 	.linksFooter {
@@ -1018,27 +1140,8 @@ MEDIA QUERIES
   }
 
 	.cajaNoticias {
-		width: 100%;
+		width: 80%;
 		margin-bottom: 5%;
-		flex-direction: row;
-	}
-
-	.contenidoNovedad {
-		width: 60%;
-	}
-
-	.contenidoNovedadImg {
-		width: 40%;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-	}
-
-	.contenidoNovedadImg img {
-		height: 100%;
-		width: auto;
-		margin: 0 auto;
-		display: block;
 	}
 
 	.no-margin {
@@ -1053,10 +1156,6 @@ MEDIA QUERIES
 		width: 48%;
 	}
 
-	.destacados {
-		width: 70%;
-	}
-
 	.destacado {
 		width: 100%;
 		height: 320px;
@@ -1066,6 +1165,9 @@ MEDIA QUERIES
 	.museo,
 	.coope {
 		background-size: 120% auto;
+	}
+	.animacion{
+		width:100%;
 	}
 
 }
@@ -1083,11 +1185,6 @@ MEDIA QUERIES
 		width: 100%;
 	}
 
-	.contenidoNovedadImg img {
-		height: auto;
-		width: 120%;
-	}
-
 	.contenidoNovedad {
 		width: 100%;
 	}
@@ -1098,6 +1195,10 @@ MEDIA QUERIES
 
 	.space-top {
 		margin-top: 9%;
+	}
+
+	.item-horarios{
+		height:70vh;
 	}
 
 	.identidad {
@@ -1127,7 +1228,6 @@ MEDIA QUERIES
 
 @media (max-width:502px) {
 	.deco2{
-		z-index:1;
 		left:-16%;
 	}
 	.content-modal {
@@ -1227,13 +1327,13 @@ MEDIA QUERIES
 	}
 
 	.coope {
-		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/modelosdescatados.jpg) no-repeat;
+		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/cooperadora.jpg) no-repeat;
 		background-size: 100% auto;
 		margin-bottom: 10%;
 	}
 
 	.museo {
-		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/modelosdescatados.jpg) no-repeat;
+		background: linear-gradient(0deg, #1D1D1B 36%, rgba(0, 0, 0, 0.1) 60%), url(images/template/museo.jpg) no-repeat;
 		background-size: 100% auto;
 	}
 
