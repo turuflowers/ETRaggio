@@ -648,16 +648,20 @@ Rotadores
 	background-position: center bottom;
 	background-size: 100% auto;
 }
-.item-horarios{
+.item-horarios, .item-cate{
 	height: 80vh;
 	max-height: 600px;
 	padding-top: 140px;
-	background-image: url(images/heros/heroHorarios.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 100% auto;
 }
-
+.item-horarios{
+	background-image: url(images/heros/heroHorarios.jpg);
+}
+.item-cate{
+	background-image: url(images/heros/heroCate.jpg);
+}
 
 .slide {
 	border-radius: 120px 0px;
@@ -861,6 +865,17 @@ UNDER CONSTRUCTION
 /*****************
 HORARIOS
 ******************/
+.aclaracion{
+	margin:0;
+	}
+.actualizacion{
+	color: #ADADAD;
+	font-weight: 500;
+	text-align: center;
+	font-size: 0.75em;
+	margin-top: 8px;
+}
+
 .grupohorarios{
 	display:Flex;
 	justify-content:flex-start;
@@ -868,8 +883,8 @@ HORARIOS
 	margin-bottom:40px;
 }
 .cardhorario{
-	width:112px;
-	height:144px;
+	width: 10%;
+	height: 164px;
 	border-radius: 16px;
 	background-color: #FFF;
 	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
@@ -878,7 +893,7 @@ HORARIOS
 	align-items: center;
 	background-image: url('images/icons/iconoHorario.svg');
 	background-repeat: no-repeat;
-	background-position: center 16px;
+	background-position: center 20px;
 	margin: 0 8px 16px 8px;
 }
 
@@ -890,17 +905,26 @@ HORARIOS
 
 .cardhorario h5{
 	color:#430DDE;
-	font-size:1.125em;
+	font-size:1.375em;
 	font-weight: 600;
 	text-align: center;
 	border-top:1px solid #c6c6c6;
 	width:100%;
-	margin-top: 100px;
+	margin-top: 104px;
+	margin-bottom: -8px;
 	padding-top: 10px;
 }
 
 .sangria{
 	padding-left:8px;
+}
+
+.dospuntos:before{
+  content:": : : ";
+}
+
+.dospuntos:after{
+  content:" : : :";
 }
 
 .cardhorario:hover h5{
@@ -1009,6 +1033,7 @@ MEDIA QUERIES
   .item1 {
     background-size: auto 100%;
   }
+	
 }
 @media (min-width:1700px){
   .item1{
@@ -1059,6 +1084,9 @@ MEDIA QUERIES
 	.coope,
 	.museo {
 		background-size: auto 120%;
+	}
+	.cardhorario{
+	width: 12%;
 	}
 }
 
@@ -1118,6 +1146,9 @@ MEDIA QUERIES
 	.destacado h2 {
 		font-size: 2em;
 	}
+	.cardhorario{
+	width: 14%;
+	}
 
 }
 
@@ -1168,6 +1199,9 @@ MEDIA QUERIES
 	}
 	.animacion{
 		width:100%;
+	}
+	.cardhorario{
+	width: 22%;
 	}
 
 }
@@ -1251,7 +1285,7 @@ MEDIA QUERIES
 
 @media (max-width:440px) {
 	#top {
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 
 	#top button {
@@ -1289,7 +1323,10 @@ MEDIA QUERIES
 	.slide {
 		border-radius: 40px 0;
 	}
-
+	.cardhorario{
+		width: 45%;
+		}
+	
 	.txtBSuperior h3 {
 		font-size: 0.9em;
 		width: 60%;
