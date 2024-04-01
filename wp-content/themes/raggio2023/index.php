@@ -1,7 +1,6 @@
 <?php 
 get_header(); 
 ?>
-
 <div id="contenido" class="contenedor">
     <?php
     if (have_posts()) :
