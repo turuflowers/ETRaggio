@@ -49,6 +49,7 @@ body {
 
 a {
 	text-decoration: none;
+	color:#4A44ED;
 }
 
 button {
@@ -115,6 +116,22 @@ strong {
 	border-radius: 24px;
 	border: 1.5px solid #fff;
 	display: inline-block;
+}
+.btnTXT {
+	color:#4A44ED;
+	font-weight: 500;
+	display:inline-block;
+	margin-top:10px;
+	font-size:14px;
+	padding: 14px 24px;
+	border-radius: 16px 0;
+	border: 1.5px solid #4A44ED;
+}
+
+.btnTXT:hover {
+	color:#fff;
+	background-color: #4A44ED;
+	border: 1.5px solid #fff;
 }
 
 .btnSecundarioLight {
@@ -622,8 +639,8 @@ Rotadores
 ******************/
 .item{
   height: 100vh;
-  //max-height: 600px;
   padding-top: 140px;
+  max-height:800px;
 }
 .item .content{
   display: flex;
@@ -639,21 +656,34 @@ Rotadores
 .item1{
 	background-image: url(images/heros/home01.jpg);
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: center 80%;
 	background-size: 100% auto;
 }
+@media (min-width:1750px){
+  .item{
+	max-height:900px;
+  }
+}
+@media (max-width:1160px){
+  .item1{
+    background-size: auto 100%;
+    background-position: center top;
+  }
+}
+
 .item2{
 	background-image: url(images/heros/home02.jpg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: 100% auto;
 }
-.item-horarios, .item-cate{
+.item-internas{
 	height: 80vh;
-	max-height: 600px;
+	max-height: 800px;
+  min-height:500px;
 	padding-top: 140px;
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: center;
 	background-size: 100% auto;
 }
 .item-horarios{
@@ -661,6 +691,12 @@ Rotadores
 }
 .item-cate{
 	background-image: url(images/heros/heroCate.jpg);
+}
+.item-becas{
+	background-image: url(images/heros/heroBecas.jpg);
+}
+.item-destacada{
+	background-image: url(images/heros/heroNoticiaDestacada.jpg);
 }
 
 .slide {
@@ -903,6 +939,7 @@ HORARIOS
 	background-repeat: no-repeat;
 }
 
+
 .cardhorario h5{
 	color:#430DDE;
 	font-size:1.375em;
@@ -913,6 +950,52 @@ HORARIOS
 	margin-top: 104px;
 	margin-bottom: -8px;
 	padding-top: 10px;
+}
+.cardhorario:hover h5{
+	color:#fff;
+}
+
+.grupobecas{
+	display:Flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	margin-bottom:40px;
+}
+
+.cardDocumentos{
+	width: 48%;
+	height: 134px;
+	border-radius: 16px;
+	background-color: #FFF;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+	display: flex;
+	align-items: center;
+	background-image: url(images/icons/icon-docDownload.svg);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+	padding-left:140px;
+}
+.cardDocumentos:hover{
+	background-color: #430DDE;
+	background-image: url('images/icons/icon-docDownloadh.svg');
+	background-repeat: no-repeat;
+}
+
+.cardDocumentos h5{
+	color:#430DDE;
+	font-size:1em;
+	font-weight: 600;
+	text-align: left;
+	border-left:1px solid #c6c6c6;
+	height:100%;
+	display: flex;
+	align-items: center;
+	padding-left: 15%;
+	padding-right: 8%;
+}
+
+.cardDocumentos:hover h5{
+	color:#fff;
 }
 
 .sangria{
@@ -927,11 +1010,48 @@ HORARIOS
   content:" : : :";
 }
 
-.cardhorario:hover h5{
-	color:#fff;
+
+
+/*****************
+CATE
+******************/
+.contenedor-txt {
+	width: 70%;
+	margin-left: auto;
+	margin-right: Auto;
+}
+.contenedor-col {
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.contenido-half{
+	width:45%;
+	margin:0;
+	padding: 0 20px 20px;
+	border-bottom:3px solid #4A44ED;
 }
 
+.listado{
+	padding: 10px;
+}
 
+.listado li{
+	margin-bottom:4px;
+}
+
+.separar li{
+	margin-bottom:10px;
+}
+.contenedor-qr{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #adadad;
+	border-radius: 16px 0 ;
+	padding:30px;
+	overflow:hidden;
+}
 
 /*****************
 footer
@@ -1029,17 +1149,18 @@ footer h5 {
 /*****************
 MEDIA QUERIES
 ******************/
-@media (min-width:1000px) and (max-width:1699px) and (min-height:600px) {
-  .item1 {
-    background-size: auto 100%;
-  }
-	
-}
-@media (min-width:1700px){
-  .item1{
-    background-position: center;
+
+@media (max-width:1240px){
+  .item-internas{
+   background-size: auto 100%;
   }
 }
+@media (max-width:1650px) and (min-height: 800px){
+	.item-internas{
+	 background-size: auto 100%;
+  }
+}
+
 @media (max-width:1198px) {
 	nav {
 		display: none;
@@ -1077,10 +1198,6 @@ MEDIA QUERIES
 		display: block;
 	}
 
-	.item-horarios{
-		background-size: auto 100%;
-	}
-
 	.coope,
 	.museo {
 		background-size: auto 120%;
@@ -1098,8 +1215,12 @@ MEDIA QUERIES
 	.content-modal {
 		border-radius: 60px 0px;
 	}
-	.item1, .item2 {
+	.item2 {
 		background-size: auto 100%;
+	}
+
+	.item-internas{
+		max-height: 600px;
 	}
 
 	.cajaNoticias {
@@ -1164,11 +1285,7 @@ MEDIA QUERIES
 
 	.item {
 		min-height: 70vh;
-		
 	}
-  .item1, .item2{
-    background-size: auto 100%;
-  }
 
 	.cajaNoticias {
 		width: 80%;
@@ -1204,6 +1321,18 @@ MEDIA QUERIES
 	width: 22%;
 	}
 
+	.contenedor-txt{
+		width:85%;
+	}
+	.contenedor-qr{
+		width:60%;
+	}
+	
+	.cardDocumentos{
+		width: 100%;
+		margin-bottom:40px;
+	}
+
 }
 
 @media (max-width:576px) {
@@ -1231,10 +1360,14 @@ MEDIA QUERIES
 		margin-top: 9%;
 	}
 
-	.item-horarios{
+	.item-internas{
 		height:70vh;
+		max-height: 500px;
 	}
 
+	.cardhorario {
+		width: 28%;
+	}
 	.identidad {
 		width: 100%;
 		justify-content: center;
@@ -1242,6 +1375,14 @@ MEDIA QUERIES
 
 	.derecha {
 		justify-content: center;
+	}
+
+	.contenido-half{
+		width:100%;
+	}
+
+	.contenedor-qr{
+		width:80%;
 	}
 
 	.linksFooter {

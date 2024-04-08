@@ -7,7 +7,7 @@ $(document).ready(function () {
   });
 	$('#hero .rotador').slick({
 		dots: true,
-    autoplay: true,
+    autoplay: false,
     useAutoplayToggleButton:false
 	  });
 });
