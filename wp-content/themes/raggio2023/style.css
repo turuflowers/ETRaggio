@@ -526,6 +526,10 @@ main
 	flex-direction: column;
 }
 
+.nowrap{
+	flex-wrap:nowrap;
+}
+
 .cajaNoticias {
 	width: 31%;
 	margin-bottom: 3%;
@@ -537,6 +541,8 @@ main
 	display: flex;
 	flex-direction: column;
 }
+
+
 
 .contenidoNovedad {
 	display: flex;
@@ -698,6 +704,13 @@ Rotadores
 .item-destacada{
 	background-image: url(images/heros/heroNoticiaDestacada.jpg);
 }
+.item-autoridades{
+	background-image: url(images/heros/heroAutoridades.jpg);
+}
+.item-programas{
+	background-image: url(images/heros/heroProgramas.jpg);
+}
+
 
 .slide {
 	border-radius: 120px 0px;
@@ -1009,7 +1022,96 @@ HORARIOS
 .dospuntos:after{
   content:" : : :";
 }
+/****************
+PROGRAMAS
+****************/
+.cardPrograma{
+	width: 12%;
+	height: 150px;
+	border-radius: 16px;
+	background-color: #FFF;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url('images/icons/icon-docDownload.svg');
+	background-size:43%;
+	background-repeat: no-repeat;
+	background-position: center 20px;
+	margin: 0 8px 16px 8px;
+}
 
+.cardPrograma:hover{
+	background-color: #430DDE;
+	background-image: url('images/icons/icon-docDownloadh.svg');
+	background-repeat: no-repeat;
+}
+
+
+.cardPrograma h5{
+	color:#430DDE;
+	font-size:1em;
+	font-weight: 600;
+	text-align: center;
+	border-top:1px solid #c6c6c6;
+	width:100%;
+	margin-top: 104px;
+	margin-bottom: -8px;
+	padding-top: 10px;
+}
+.cardPrograma:hover h5{
+	color:#fff;
+}
+
+/****************
+Autoridades
+*****************/
+.moduloAutoridades{
+	margin-top:120px;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+}
+
+.cajaAutoridades {
+	width: 30%;
+	margin-bottom: 3%;
+	margin-left:1%;
+	margin-right:1%;
+	border-radius: 16px;
+	background: #FFF;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+  justify-content: space-between;
+	text-align:center;
+}
+.contenidoAutoridades {
+	display: flex;
+	flex-direction: column;
+	padding: 16px 32px 24px;
+}
+.contenidoAutoridadesImg{
+  position:relative;
+	height:100px;
+}
+.contenidoAutoridadesImg img{
+	position: absolute;
+	left:50%;
+	top:0;
+	transform: translate(-50%, -50%);
+  	max-width:180px;
+}
+
+.contenidoAutoridades h3 {
+	margin-top: 8%;
+	margin-bottom: 8%;
+}
+
+.contenidoAutoridades p {
+	margin:0;
+}
 
 
 /*****************
@@ -1331,6 +1433,29 @@ MEDIA QUERIES
 	.cardDocumentos{
 		width: 100%;
 		margin-bottom:40px;
+	}
+	.moduloAutoridades{
+		flex-direction: column;
+		align-items:center;
+		margin-top:3%;
+	}
+
+	.cajaAutoridades {
+		width: 70%;
+		margin:120px 3% 3% 3%;
+		border-radius: 16px;
+		background: #FFF;
+		box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
+		position: relative;
+		display: flex;
+		flex-direction: column-reverse;
+	  justify-content: space-between;
+		text-align:center;
+	}
+
+	.contenidoAutoridades h3{
+		margin-top:2%;
+		margin-bottom:2%;
 	}
 
 }
