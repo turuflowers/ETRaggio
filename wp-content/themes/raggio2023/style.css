@@ -81,8 +81,17 @@ img {
 	width: 100%;
 }
 
+iframe {
+	width:100%;
+}
+
+
 .text-center {
 	text-align: center;
+}
+
+li{
+	margin-bottom:12px;
 }
 
 strong {
@@ -485,7 +494,7 @@ main
 	position:absolute;
 	z-index:-1;
 	left:0;
-	bottom: -40px;
+	bottom: -90px; /*ajuste de -40 para que no pise textos en empresas */
 }
 .deco3{
 	position:absolute;
@@ -709,6 +718,13 @@ Rotadores
 }
 .item-programas{
 	background-image: url(images/heros/heroProgramas.jpg);
+}
+.item-pei{
+	background-image: url(images/heros/heroPEI.jpg);
+	background-color: #918cff;
+}
+.item-remo{
+	background-image: url(images/heros/heroRemo.jpg);
 }
 
 
@@ -987,6 +1003,7 @@ HORARIOS
 	background-repeat: no-repeat;
 	background-position: 40px center;
 	padding-left:140px;
+	margin-bottom:40px;
 }
 .cardDocumentos:hover{
 	background-color: #430DDE;
@@ -1093,13 +1110,13 @@ TABS
 	padding-bottom:16px;
 	color:#1D1D1B;
 	border-color:transparent;
-	border-bottom:4px solid transparent;;
+	border-bottom:3px solid transparent;;
 	margin:0;
 	cursor:pointer;
 }
 .btnTab:hover, .btnTab.active{
 	color:#430DDE;
-	border-bottom:4px solid #430DDE ;
+	border-bottom:3px solid #430DDE ;
 	
 }
 
@@ -1199,6 +1216,38 @@ CATE
 	border-radius: 16px 0 ;
 	padding:30px;
 	overflow:hidden;
+}
+
+/****************
+Empresas
+*****************/
+.modImportante{
+	border-radius: 16px 0 ;
+	color: #fff;
+	padding:20px 40px;
+	background-color: #4a44ed;
+	display:flex;
+	align-items: center;
+}
+
+.modImportante ul{
+	margin-left:-30px;
+}
+
+.modImportante .adornado{
+	margin-left: 30px;
+}
+
+.modImportante img{
+	width:80%;
+}
+
+/****************
+Remo
+*****************/
+.achicar{
+	width:50%;
+	margin-top:30px;
 }
 
 /*****************
@@ -1507,7 +1556,9 @@ MEDIA QUERIES
 		margin-top:2%;
 		margin-bottom:2%;
 	}
-
+	.achicar{
+		width:70%;
+	}
 }
 @media (max-width:650px){
 	.cardPrograma{
@@ -1706,6 +1757,10 @@ MEDIA QUERIES
 
 	.cardPrograma h5{
 		margin-top:84px;
+	}
+
+	.achicar{
+		width:90%;
 	}
 
 }
