@@ -93,6 +93,10 @@ iframe {
 li{
 	margin-bottom:12px;
 }
+.sindeco {
+	list-style-type: none;
+	margin-right:-30px;
+	}
 
 strong {
 	font-weight: 600;
