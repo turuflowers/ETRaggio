@@ -726,6 +726,7 @@ Rotadores
 }
 .item-programas{
 	background-image: url(images/heros/heroProgramas.jpg);
+	background-color: #9fc1ff;
 }
 .item-pei{
 	background-image: url(images/heros/heroPEI.jpg);
@@ -754,7 +755,15 @@ Rotadores
 .item-mapa{
 	background-image: url(images/heros/heroMapa.jpg);
 	background-color: #0052cb;
-	
+}
+.item-doe{
+	background-image: url(images/heros/heroDoe.jpg);
+	background-color:#685ce3;
+}
+
+.item-tutorias{
+	background-image: url(images/heros/heroTutorias.jpg);
+	background-color:#2a50ac;
 }
 
 
