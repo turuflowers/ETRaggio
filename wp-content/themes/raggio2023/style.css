@@ -98,6 +98,19 @@ li{
 	margin-right:-30px;
 	}
 
+.conlabels li{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: .5em;
+}
+.conlabels strong{
+	min-width: 50px;
+	margin-right: .5em;
+}
+.conlabels span{
+	flex: 1;
+}
+
 strong {
 	font-weight: 600;
 	}
@@ -1611,6 +1624,9 @@ MEDIA QUERIES
 	}
 	.achicar{
 		width:70%;
+	}
+	#tutorias .contenido-half{
+		width:100%;
 	}
 
 }
