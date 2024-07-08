@@ -773,6 +773,10 @@ Rotadores
 	background-image: url(images/heros/heroDoe.jpg);
 	background-color:#685ce3;
 }
+.item-museo{
+	background-image: url(images/heros/heroMuseo.jpg);
+	background-color:#1D1D1B;
+}
 
 .item-tutorias{
 	background-image: url(images/heros/heroTutorias.jpg);
