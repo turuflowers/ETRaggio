@@ -712,7 +712,7 @@ Rotadores
 .item-internas{
 	height: 80vh;
 	max-height: 800px;
-  min-height:500px;
+  	min-height:500px;
 	padding-top: 140px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -781,6 +781,10 @@ Rotadores
 .item-tutorias{
 	background-image: url(images/heros/heroTutorias.jpg);
 	background-color:#2a50ac;
+}
+.item-aspirantes{
+	background-image: url(images/heros/heroAspirantes.jpg);
+	background-color:#1c47ba;
 }
 
 
@@ -1666,7 +1670,7 @@ MEDIA QUERIES
 	}
 
 	.item-internas{
-		height:70vh;
+		height:auto;
 		max-height: 500px;
 	}
 
