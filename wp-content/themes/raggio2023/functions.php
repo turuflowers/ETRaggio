@@ -1,4 +1,35 @@
 <?php
+// Llamado al CSS del tema
+function cargar_estilos() {
+    // Registrar estilos
+    wp_register_style('estilos-css', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+
+    // Agregar estilos
+    wp_enqueue_style('estilos-css');
+}
+add_action('wp_enqueue_scripts', 'cargar_estilos');
+
+// Llamado a los archivos de scripts
+function cargar_scripts() {
+    // Registrar script jQuery
+    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', true);
+    wp_register_script('slick', '//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js', array(), '3.5.1', true);
+
+    
+    wp_register_script('scripts-personalizados-1', get_template_directory_uri() . '/scripts/navmenu.js', array('jquery'), '1.0', true);
+
+    wp_register_script('scripts-personalizados-2', get_template_directory_uri() . '/scripts/rotador.js', array('jquery'), '1.0', true);
+    wp_register_script('scripts-personalizados-3', get_template_directory_uri() . '/scripts/modal.js', array('jquery'), '1.0', true);
+
+    // Agregar scripts al frontend
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('slick');
+    wp_enqueue_script('scripts-personalizados-1');
+    wp_enqueue_script('scripts-personalizados-2');
+    wp_enqueue_script('scripts-personalizados-3');
+}
+add_action('wp_enqueue_scripts', 'cargar_scripts');
+
 
 // Registrando menús
 function registrar_menus() {
@@ -21,3 +52,11 @@ function agregar_clases_a_menu($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'agregar_clases_a_menu', 10, 3);
+
+function edit_menu_item($item_output, $item) {
+    if ( get_field( 'dropdown_item', $item) == true ) { 
+        return '<button>'.$item->title.'</button>';
+    }
+    return $item_output;
+}
+add_filter('walker_nav_menu_start_el','edit_menu_item', 10, 2);
