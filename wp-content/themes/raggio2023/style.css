@@ -439,13 +439,13 @@ nav a:hover {
 	padding: 0 5%;
 }
 
-#navprincipal {
+#navprincipal, .menu-principal ul{
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
 }
 
-#navprincipal li {
+#navprincipal li, .menu-principal li {
 	position: relative;
 }
 
