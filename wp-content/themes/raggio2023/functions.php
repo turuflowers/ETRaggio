@@ -60,3 +60,31 @@ function edit_menu_item($item_output, $item) {
     return $item_output;
 }
 add_filter('walker_nav_menu_start_el','edit_menu_item', 10, 2);
+
+// ACF
+function my_post_title_updater( $post_id ) {
+
+    $my_post = array();
+    $my_post['ID'] = $post_id;
+
+
+    if ( get_post_type() == 'horario' ) {
+      $my_post['post_title'] = get_field('nombre_del_curso');
+    } elseif ( get_post_type() == 'descarga-relacionada' ) {
+        $pages = get_field('descargas_relacionadas_pagina');
+
+        $page_slug = "";
+        foreach($pages as $page){
+            $page_slug .= " | " . $page->post_title;
+        }
+        
+        $my_post['post_title'] = get_field('titulo_de_grupo_de_descargas') . $page_slug;
+    }
+
+    // Update the post into the database
+    wp_update_post( $my_post );
+
+  }
+   
+  // run after ACF saves the $_POST['fields'] data
+  add_action('acf/save_post', 'my_post_title_updater', 20);
