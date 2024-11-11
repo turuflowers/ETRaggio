@@ -222,7 +222,7 @@ strong {
 	margin-bottom: 40px;
 }
 
-.tituloSeccion h2 {
+.tituloSeccion h2, .tituloSeccion .h2 {
 	margin-top: 0;
 	margin-bottom: 1.5%;
 }
@@ -287,7 +287,7 @@ MODAL
 	padding: 5% 10% 10%;
 }
 
-.txt-modal h2 {
+.txt-modal h2, .txt-modal .h2 {
 	font-size: 1.5em;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -668,7 +668,7 @@ main
 	color: #4A44ED;
 }
 
-.cajasActividades h3 {
+.cajasActividades h3, .cajasActividades .h3 {
 	margin-top: -20px;
 }
 
@@ -731,7 +731,7 @@ Rotadores
 .item-cate{
 	background-image: url(images/heros/heroCate.jpg);
 }
-.item-becas{
+.item-becas, .item-becas-ciudad-2024{
 	background-image: url(images/heros/heroBecas.jpg);
 	background-color: #1b46b9;
 }
@@ -904,7 +904,7 @@ Rotadores
 	padding-top: 1%;
 }
 
-.txtBSuperior h3 {
+.txtBSuperior h3, .txtBSuperior .h3 {
 	order: 1;
 	font-size: 1em;
 }
@@ -1227,7 +1227,7 @@ Autoridades
   	max-width:180px;
 }
 
-.contenidoAutoridades h3 {
+.contenidoAutoridades h3, .contenidoAutoridades .h3 {
 	margin-top: 8%;
 	margin-bottom: 8%;
 }
