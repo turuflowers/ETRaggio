@@ -67,18 +67,28 @@ function my_post_title_updater( $post_id ) {
     $my_post = array();
     $my_post['ID'] = $post_id;
 
+    switch(get_post_type()){
+        case "horario":
+            $page_slug = "";
 
-    if ( get_post_type() == 'horario' ) {
-      $my_post['post_title'] = get_field('nombre_del_curso');
-    } elseif ( get_post_type() == 'descarga-relacionada' ) {
-        $pages = get_field('descargas_relacionadas_pagina');
+            if(get_field('especialidad') && get_field('especialidad') != ""){
+                $page_slug = get_field('especialidad') . " | ";
+            }
 
-        $page_slug = "";
-        foreach($pages as $page){
-            $page_slug .= " | " . $page->post_title;
-        }
-        
-        $my_post['post_title'] = get_field('titulo_de_grupo_de_descargas') . $page_slug;
+            $page_slug .= get_field('nombre_del_curso');
+
+            $my_post['post_title'] = $page_slug;
+        break;
+        case "descarga-relacionada":
+            $pages = get_field('descargas_relacionadas_pagina');
+
+            $page_slug = "";
+            foreach($pages as $page){
+                $page_slug .= " | " . $page->post_title;
+            }
+            
+            $my_post['post_title'] = get_field('titulo_de_grupo_de_descargas') . $page_slug;
+        break;
     }
 
     // Update the post into the database
