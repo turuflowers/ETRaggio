@@ -792,6 +792,10 @@ Rotadores
 	background-image: url(images/heros/heroAspirantes.jpg);
 	background-color:#1c47ba;
 }
+.item-verano{
+	background-image: url(images/heros/heroVacaciones.jpg);
+	background-color:#5140b4;
+}
 
 
 .slide {
