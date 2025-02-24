@@ -498,6 +498,12 @@ header h2 {
 	margin: 0;
 }
 
+.etiquetaNew{
+	background-color:#4A44ED;
+	padding: 4px 16px;
+	border-radius: 16px;
+}
+
 /*****************
 main
 ******************/
@@ -805,10 +811,6 @@ Rotadores
 	background-image: url(images/heros/heroVacaciones.jpg);
 	background-color:#5140b4;
 }
-.item-articulacion{
-	background-image: url(images/heros/heroArticulacion.jpg);
-	background-color:#2390d5;
-}
 
 
 .slide {
@@ -887,6 +889,13 @@ Rotadores
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: left center;
+}
+
+#bannerSuperior_TICs{
+	background-image: url("images/rotadores/cicloSuperior/bannerSuperiorTICs.jpg");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: left center;
 }
 
 .contenidoBSuperior {
