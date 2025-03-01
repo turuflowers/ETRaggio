@@ -786,6 +786,10 @@ Rotadores
 	background-image: url(images/heros/heroMapa.jpg);
 	background-color: #0052cb;
 }
+.item-telefono{
+	background-image: url(images/heros/heroTelefono.jpg);
+	background-color: #0052cb;
+}
 .item-doe{
 	background-image: url(images/heros/heroDoe.jpg);
 	background-color:#685ce3;
