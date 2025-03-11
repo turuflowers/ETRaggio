@@ -598,7 +598,7 @@ main
 	margin-bottom: 0;
 }
 
-.contenidoNovedad p {
+.contenidoNovedad .textoNovedad{
 	order: 3;
 }
 
