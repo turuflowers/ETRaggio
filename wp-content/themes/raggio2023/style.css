@@ -180,7 +180,7 @@ strong {
 	background-color: #4A44ED;
 }
 
-.btnSecundarioDark {
+.btnSecundarioDark{
 	color: #1D1D1B;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -196,6 +196,23 @@ strong {
 .btnSecundarioGosth:hover {
 	color: #1D1D1B;
 	background-color: #FFF;
+	border: 1.5px solid #FFF;
+	display: inline-block;
+}
+.btnDestacado{
+	color: #1D1D1B;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 14px 24px;
+	border-radius: 24px;
+	background-color: #FDEB18;
+	border: 1.5px solid #FDEB18;
+	display: inline-block;
+	cursor: pointer;
+}
+.btnDestacado:hover {
+	color: #FFF;
+	background-color: #1D1D1B;
 	border: 1.5px solid #FFF;
 	display: inline-block;
 }
@@ -259,6 +276,12 @@ strong {
 
 .space-bottom {
 	margin-bottom: 80px;
+}
+.invertir{
+	flex-direction: row-reverse;
+}
+.centrar{
+	align-items: center;
 }
 
 /*****************
@@ -502,6 +525,26 @@ header h2 {
 	background-color:#4A44ED;
 	padding: 4px 16px;
 	border-radius: 16px;
+}
+
+/*****************
+BREDCRUMB
+******************/
+#breadcrumb{
+	color:#4D4D4D;
+	font-weight: 500;
+	font-size:14px;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: -3%;
+	margin-bottom: 5%;
+}
+#breadcrumb a{
+	color:#430DDE;
+}
+#breadcrumb a:hover{
+	color:#0000C8;
 }
 
 /*****************
@@ -824,6 +867,10 @@ Rotadores
 	background-color:#a9c8f5;
 }
 
+.item-orientacionTics{
+	background-image: url(images/heros/heroOrTics.jpg);
+	background-color:#1c47ba;
+}
 
 .slide {
 	border-radius: 120px 0px;
@@ -1273,6 +1320,43 @@ Autoridades
 .contenidoAutoridades p {
 	margin:0;
 }
+/*****************
+ORIENTACIONES
+******************/
+.habilidades{
+	background-color:#D9D9D9;
+	padding:80px 0;
+}
+.habilidad{
+	width:19%;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:column-reverse;
+	align-items: center;
+	justify-content: flex-end;
+}
+.alineaciontxt{
+	align-items: baseline;
+}
+.spacetop2{
+	margin-top: 2em;
+}
+.habilidades span{
+	font-weight: 700;
+	color:#430DDE;
+	display:block;
+}
+.habilidad img{
+	width:120px;
+}
+.claim{
+	border-radius: 80px 0;
+	text-align:center;
+	color: #fff;
+	padding:10%;
+	background-color: #4a44ed;
+	font-size:20px;
+}
 
 
 /*****************
@@ -1295,6 +1379,18 @@ CATE
 	border-bottom:3px solid #4A44ED;
 }
 
+.contenido-half2{
+	width:45%;
+	margin:0;
+	padding: 0 20px 20px;
+}
+
+.contenido-halfimg{
+	width:50%;
+	margin:0;
+	border-radius:0 80px 0 80px;
+	overflow: hidden;
+}
 .controlar{
 	max-width:70%;
 	margin-left:auto;
@@ -1521,6 +1617,12 @@ MEDIA QUERIES
 	.cardhorario{
 	width: 12%;
 	}
+	.habilidad{
+		width: 33%;
+		padding:0 24px 40px 24px;
+	}
+	.habilidades .contenedor-col{
+	justify-content:center;
 }
 
 @media (max-width:992px) {
@@ -1589,6 +1691,17 @@ MEDIA QUERIES
 	.cardPrograma{
 		width:18%;
 		background-size: 40%;
+	}
+	
+	.contenido-half2{
+		width:100%;
+		padding-bottom:60px;
+	}
+	.contenido-halfimg{
+		width:100%;
+	}
+	.habilidad{
+		width: 50%;
 	}
 
 }
@@ -1756,6 +1869,9 @@ MEDIA QUERIES
 	}
 	.controlar{
 		max-width:90%;
+	}
+	.habilidad{
+		width: 80%;
 	}
 }
 
