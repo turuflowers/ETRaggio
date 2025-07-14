@@ -606,6 +606,28 @@ main
 	flex-direction: column;
 }
 
+.tabla-becas{
+	margin-bottom:60px;
+	border-collapse: collapse;
+}
+
+.tabla-becas td{
+	text-align:center;
+	padding:8px;
+	border-bottom:1px solid #9c9c9c;
+	width:30%;
+}
+
+.tabla-becas td.linea{
+	border-left:1px solid #9c9c9c;
+}
+
+.tabla-becas th{
+	text-align:center;
+	padding: 8px;
+	border-bottom:2px solid #000;
+}
+
 .nowrap{
 	flex-wrap:nowrap;
 }
@@ -700,6 +722,11 @@ main
 }
 .chispa {
 	background-image: url("images/template/chispa.jpg");
+	background-repeat: no-repeat;
+	background-size: 120% auto;
+}
+.biblioteca {
+	background-image: url("images/template/biblioteca.jpg");
 	background-repeat: no-repeat;
 	background-size: 120% auto;
 }
@@ -865,6 +892,10 @@ Rotadores
 .item-calendario{
 	background-image: url(images/heros/heroCalendario.jpg);
 	background-color:#a9c8f5;
+}
+.item-raggioVerde{
+	background-image: url(images/heros/heroRaggioVerde.jpg);
+	background-color:#1c47ba;
 }
 
 .item-orientacionTics{
@@ -1353,7 +1384,7 @@ ORIENTACIONES
 	border-radius: 80px 0;
 	text-align:center;
 	color: #fff;
-	padding:10%;
+	padding:5%;
 	background-color: #4a44ed;
 	font-size:20px;
 }
@@ -1611,7 +1642,8 @@ MEDIA QUERIES
 
 	.coope,
 	.museo, 
-	.chispa {
+	.chispa,
+	.biblioteca{
 		background-size: auto 120%;
 	}
 	.cardhorario{
@@ -1745,7 +1777,8 @@ MEDIA QUERIES
 
 	.museo,
 	.coope,
-	.chispa{
+	.chispa,
+	.biblioteca{
 		background-size: 120% auto;
 	}
 	.animacion{
