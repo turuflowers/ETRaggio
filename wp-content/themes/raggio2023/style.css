@@ -124,6 +124,9 @@ strong {
 .spacetop {
 	margin-top: 4em;
 }
+.distanciabtns{
+	margin-top:24px;
+}
 
 .data {
 	color: #ADADAD;
@@ -199,6 +202,37 @@ strong {
 	border: 1.5px solid #FFF;
 	display: inline-block;
 }
+
+.btnppal{
+	color: #1D1D1B;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 14px 24px;
+	border-radius: 24px;
+	background-color: #FDEB18;
+	border: 1.5px solid #FDEB18;
+	display: inline-block;
+	cursor: pointer;
+}
+.btnppal:hover {
+	color: #FFF;
+	background-color: #4A44ED;
+	border: 1.5px solid #4A44ED;
+	display: inline-block;
+}
+
+.btnGosth{
+	color: #4A44ED;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 14px 24px;
+	border-radius: 24px;
+	border: 1.5px solid #fff;
+	display: block;
+	cursor: pointer;
+}
+
+
 .btnDestacado{
 	color: #1D1D1B;
 	font-weight: 500;
@@ -1402,6 +1436,7 @@ CATE
 	display:flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	width: 100%;
 }
 .contenido-half{
 	width:45%;
