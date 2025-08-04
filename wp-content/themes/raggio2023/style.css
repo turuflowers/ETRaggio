@@ -321,6 +321,7 @@ strong {
 	align-items: center;
 }
 
+
 /*****************
 MODAL
 ******************/
@@ -1624,7 +1625,9 @@ footer h5 {
 	padding: 12px 24px 12px 0;
 }
 
-
+.ancho90{
+	width:90%;
+}
 
 /*****************
 MEDIA QUERIES
