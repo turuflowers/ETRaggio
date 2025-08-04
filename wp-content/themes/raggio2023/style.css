@@ -127,6 +127,9 @@ strong {
 .distanciabtns{
 	margin-top:24px;
 }
+.distancialinks{
+	margin-right:16px;
+}
 
 .data {
 	color: #ADADAD;
@@ -1878,6 +1881,12 @@ MEDIA QUERIES
 	}
 	.cajaNoticias {
 		flex-direction: column;
+	}
+	.distancialinks{
+		display:block;
+		margin-right:0;
+		text-align:center;
+		margin-bottom:16px;
 	}
 
 	.contenidoNovedadImg {
