@@ -940,6 +940,10 @@ Rotadores
 	background-image: url(images/heros/heroOrTics.jpg);
 	background-color:#1c47ba;
 }
+.item-orientacionTimm{
+	background-image: url(images/heros/heroOrTimm.jpg);
+	background-color:#1c47ba;
+}
 
 .slide {
 	border-radius: 120px 0px;
