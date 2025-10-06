@@ -841,7 +841,7 @@ Rotadores
 	padding-top: 140px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100% auto;
+	background-size: cover; /*100% auto;*/
 }
 .item-horarios{
 	background-image: url(images/heros/heroHorarios.jpg);
@@ -850,7 +850,11 @@ Rotadores
 .item-cate{
 	background-image: url(images/heros/heroCate.jpg);
 }
-.item-becas, .item-becas-ciudad-2024{
+.item-becas, .item-becas-ciudad-2024 {
+	background-image: url(images/heros/herobecacdad.jpg);
+	background-color: #004fc0;
+}
+.item-becaAlimentaria{
 	background-image: url(images/heros/heroBecas.jpg);
 	background-color: #1b46b9;
 }
@@ -937,13 +941,22 @@ Rotadores
 }
 
 .item-orientacionTics{
-	background-image: url(images/heros/heroOrTics.jpg);
+	background-image:url(images/heros/heroOrTics.jpg);
 	background-color:#1c47ba;
 }
 .item-orientacionTimm{
 	background-image: url(images/heros/heroOrTimm.jpg);
 	background-color:#1c47ba;
 }
+.item-orientacionIndumentaria{
+	background-image: url(images/heros/heroOrIndumentaria.jpg);
+	background-color:#1c47ba;
+}
+.item-orientacionGraficas{
+	background-image: url(images/heros/heroOrGraficas.jpg);
+	background-color:#1c47ba;
+}
+
 
 .slide {
 	border-radius: 120px 0px;
