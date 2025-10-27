@@ -956,7 +956,13 @@ Rotadores
 	background-image: url(images/heros/heroOrGraficas.jpg);
 	background-color:#1c47ba;
 }
-
+.item-orientacionOrfebreria{
+	background-image: url(images/heros/heroOrOrfebreria.jpg);
+	background-color:#1c47ba;
+}
+.item-borrador{
+	background-color:#1c47ba;
+}
 
 .slide {
 	border-radius: 120px 0px;
@@ -1652,12 +1658,12 @@ MEDIA QUERIES
 
 @media (max-width:1240px){
   .item-internas{
-   background-size: auto 100%;
+   background-size: cover/*auto 100%*/;
   }
 }
 @media (max-width:1650px) and (min-height: 800px){
-	.item-internas{
-	 background-size: auto 100%;
+.item-internas{
+ background-size: cover /*auto 100%*/;
   }
 }
 
