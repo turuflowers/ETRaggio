@@ -814,7 +814,7 @@ Rotadores
 	background-image: url(images/heros/home01.jpg);
 	background-repeat: no-repeat;
 	background-position: center 80%;
-	background-size: 100% auto;
+	background-size: cover/*100% auto*/;
 }
 @media (min-width:1750px){
   .item{
@@ -958,6 +958,10 @@ Rotadores
 }
 .item-orientacionOrfebreria{
 	background-image: url(images/heros/heroOrOrfebreria.jpg);
+	background-color:#1c47ba;
+}
+.item-orientacionMMO{
+	background-image:url(images/heros/heroOrMmo2.jpg);
 	background-color:#1c47ba;
 }
 .item-borrador{
