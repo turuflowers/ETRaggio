@@ -1635,6 +1635,13 @@ CATE
 	border-radius: 16px 0;
 	padding: 30px;
 	overflow: hidden;
+	margin-bottom:10%;
+}
+
+.contenedor-imagenes {
+	display:flex;
+	flex-wrap:wrap;
+	width: 100%;
 }
 
 /****************
