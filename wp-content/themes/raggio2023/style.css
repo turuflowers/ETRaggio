@@ -573,7 +573,7 @@ header h1 {
 	margin: 0;
 }
 
-header h2 {
+header h2, .slogan {
 	font-size: 1em;
 	font-weight: 400;
 	font-style: italic;
@@ -741,6 +741,14 @@ main
 	position: Absolute;
 	bottom: 0;
 	right: 0;
+}
+.contenidoNovedad a.contenidoespecial{
+	position:static;
+	display:block;
+	padding:0.5em 1em 0.5em 0;
+}
+.contenidoespecial:hover{
+	text-decoration: underline;
 }
 
 .destacado {
